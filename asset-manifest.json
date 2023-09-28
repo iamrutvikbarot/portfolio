@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.ea52161f.css",
+    "main.js": "/portfolio/static/js/main.aa1bf1d9.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/Rutvik_Barot.pdf": "/portfolio/static/media/Rutvik_Barot.32fb458251b774c3a818.pdf",
+    "static/media/RobotoSlab-Black.ttf": "/portfolio/static/media/RobotoSlab-Black.b1eefbae7b352cda1c3a.ttf",
+    "static/media/RobotoSlab-Bold.ttf": "/portfolio/static/media/RobotoSlab-Bold.aea772dee2141c9b0792.ttf",
+    "static/media/RobotoSlab-Regular.ttf": "/portfolio/static/media/RobotoSlab-Regular.7ff9da9c484d15185b5b.ttf",
+    "static/media/MyImage.webp": "/portfolio/static/media/MyImage.c7054abeaefeb81d4c35.webp",
+    "static/media/GildaDisplay-Regular.ttf": "/portfolio/static/media/GildaDisplay-Regular.f712cdf2015640c8cc1e.ttf",
+    "static/media/gotosite.webp": "/portfolio/static/media/gotosite.dc2459843a8d51a90e5d.webp",
+    "static/media/github.webp": "/portfolio/static/media/github.ed1c06d925fff0b57e32.webp",
+    "index.html": "/portfolio/index.html",
+    "main.ea52161f.css.map": "/portfolio/static/css/main.ea52161f.css.map",
+    "main.aa1bf1d9.js.map": "/portfolio/static/js/main.aa1bf1d9.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea52161f.css",
+    "static/js/main.aa1bf1d9.js"
+  ]
+}
