@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Noto Sans Tai Tham
+- Font Author: Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tai-tham)
+- Font Source: http://fonts.gstatic.com/s/notosanstaitham/v20/kJEbBv0U4hgtwxDUw2x9q7tbjLIfbPGHBoaVSAZ3MdLJBPscPgquyaRGKMw.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
