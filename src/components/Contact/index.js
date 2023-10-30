@@ -26,19 +26,26 @@ export default function Contact() {
 
 
   const handleSubmit = (e) => {
-    // setLoading(true);
+    setLoading(true);
     e.preventDefault();
-    // const { username, email, message } = e.target.value;
-
-    console.log(">>", userName)
-    console.log(">>", email)
-    console.log(">>", message)
 
     emailjs.sendForm('service_ji84oks', 'template_lpzr5ea', form.current, 'v7n5EzqpSvsNWv4uS')
     .then((result) => {
-      console.log("// show the user a success message", result)
+      // console.log("// show the user a success message", result)
+      setLoading(false);
+      setMailSent(true);
+      setTimeout(() => {
+        setMailSent(false);
+      }, 2000);
+      setUserName("");
+      setEmail("");
+      setMessage("");
     }, (error) => {
-      console.log("// show the user an error", error)
+      // console.log("// show the user an error", error);
+      setLoading(false);
+      setUserName("");
+      setEmail("");
+      setMessage("");
         
     });
 
@@ -71,6 +78,7 @@ export default function Contact() {
                 type="text"
                 class="rounded-none rounded-r-lg  border block flex-1 min-w-0 w-full text-sm p-2.5  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Name"
+                name="user_Name"
                 onChange={(e)=>{setUserName(e.target.value)}}
               />
             </div>
@@ -87,6 +95,7 @@ export default function Contact() {
                 type="email"
                 class="rounded-none rounded-r-lg border block flex-1 min-w-0 w-full text-sm p-2.5  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Email"
+                name="replay_To"
               />
             </div>
             <textarea
@@ -96,6 +105,7 @@ export default function Contact() {
               rows="4"
               required
               minLength={10}
+              name="message"
               placeholder="Write your message here..."
               class="block h-40 text-white mt-10 p-2.5 w-full text-sm rounded-lg border bg-gray-700 border-gray-600 focus:ring-blue-500 focus:border-blue-500 resize-none"
             ></textarea>

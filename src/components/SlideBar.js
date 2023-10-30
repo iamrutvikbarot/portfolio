@@ -3,11 +3,29 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Slidebar() {
   const [select, setSelect] = useState(0);
+  const [width , setWidth] = useState(window.screen.width)
+ 
+  useEffect(() => {
+    
+    window.addEventListener("resize",()=>{
+      setWidth(window.screen.width);
+    })
+
+    return () =>{
+      window.removeEventListener("resize",()=>{
+        setWidth(window.screen.width);
+      })
+    }
+  
+   
+  }, [width])
+  
   return (
+    width > 1080 &&
     <div className="flex-none  bg-black h-screen min-w-[25%] fixed ">
       <div className="nav flex  text-white text-lg mt-10 flex-col align-middle justify-center text-center w-full gap-5 overflow-hidden">
         <div data-aos="slide-down">
