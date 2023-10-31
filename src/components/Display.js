@@ -27,11 +27,11 @@ export default function Display() {
 
   return (
     <div className={` ${width > 1080 &&  'pl-[25%]' }   w-screen back text-white  `}>
-      <Home />
-      <About />
-      <Resume />
-      <Projects />
-      <Contact />
+      <Home width={width}/>
+      <About width={width}/>
+      <Resume width={width}/>
+      <Projects width={width}/>
+      <Contact width={width}/>
     </div>
   );
 }

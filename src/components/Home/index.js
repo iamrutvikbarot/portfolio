@@ -2,7 +2,7 @@ import Typewriter from "typewriter-effect";
 import GraphemeSplitter from "grapheme-splitter";
 import "../../App.css";
 
-export default function Home() {
+export default function Home({width}) {
   const stringSplitter = (string) => {
     const splitter = new GraphemeSplitter();
     return splitter.splitGraphemes(string);
@@ -55,26 +55,6 @@ export default function Home() {
       >
         <a href="#contact">Contact Me</a>
       </button>
-      <div
-        className=" cursor-pointer w-fit left-[62%] absolute bottom-16"
-        data-aos="flip-up"
-        data-aos-offset="20"
-        data-aos-delay="2000"
-      >
-        <a href="#about" className="text-slate-400">
-          <svg
-            width="24"
-            height="24"
-            xmlns="http://www.w3.org/2000/svg"
-            fillRule="evenodd"
-            clipRule="evenodd"
-            fill="currentColor"
-            className="motion-safe:animate-bounce"
-          >
-            <path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 8l-5.247 6.44-5.263-6.44-.737.678 6 7.322 6-7.335-.753-.665z" />
-          </svg>
-        </a>
-      </div>
     </div>
   );
 }

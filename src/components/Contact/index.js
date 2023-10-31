@@ -2,55 +2,56 @@ import EmailIcon from "@mui/icons-material/Email";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import PersonIcon from "@mui/icons-material/Person";
 import FileDownloadDoneIcon from "@mui/icons-material/FileDownloadDone";
-// import PhoneIcon from "@mui/icons-material/Phone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
 import CopyrightIcon from "@mui/icons-material/Copyright";
 import emailjs from "emailjs-com";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import * as LottiePlayer from "@lottiefiles/lottie-player";
 import { useRef, useState } from "react";
 
-export default function Contact() {
+export default function Contact({ width }) {
   const [mailSent, setMailSent] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const [userName, setUserName ] = useState('')
-  const [email, setEmail ] = useState('')
-  const [message, setMessage ] = useState('')
+  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const form = useRef();
-
 
   const handleSubmit = (e) => {
     setLoading(true);
     e.preventDefault();
 
-    emailjs.sendForm('service_ji84oks', 'template_lpzr5ea', form.current, 'v7n5EzqpSvsNWv4uS')
-    .then((result) => {
-      // console.log("// show the user a success message", result)
-      setLoading(false);
-      setMailSent(true);
-      setTimeout(() => {
-        setMailSent(false);
-      }, 2000);
-      setUserName("");
-      setEmail("");
-      setMessage("");
-    }, (error) => {
-      // console.log("// show the user an error", error);
-      setLoading(false);
-      setUserName("");
-      setEmail("");
-      setMessage("");
-        
-    });
-
-
-
+    emailjs
+      .sendForm(
+        "service_ji84oks",
+        "template_lpzr5ea",
+        form.current,
+        "v7n5EzqpSvsNWv4uS"
+      )
+      .then(
+        (result) => {
+          // console.log("// show the user a success message", result)
+          setLoading(false);
+          setMailSent(true);
+          setTimeout(() => {
+            setMailSent(false);
+          }, 2000);
+          setUserName("");
+          setEmail("");
+          setMessage("");
+        },
+        (error) => {
+          // console.log("// show the user an error", error);
+          setLoading(false);
+          setUserName("");
+          setEmail("");
+          setMessage("");
+        }
+      );
   };
   return (
     <div
@@ -61,7 +62,7 @@ export default function Contact() {
         Contact
       </div>
       <div className="flex flex-row  ">
-        <div className="flex-auto  w-32 pl-10 overflow-visible">
+        <div className="flex-auto  w-32 p-10 overflow-visible">
           <form onSubmit={handleSubmit} data-aos={"slide-up"} ref={form}>
             <label class="block mb-2 text-2xl font-semibold mt-3  text-white ">
               Get in Touch
@@ -79,7 +80,9 @@ export default function Contact() {
                 class="rounded-none rounded-r-lg  border block flex-1 min-w-0 w-full text-sm p-2.5  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Name"
                 name="user_Name"
-                onChange={(e)=>{setUserName(e.target.value)}}
+                onChange={(e) => {
+                  setUserName(e.target.value);
+                }}
               />
             </div>
             <div class="flex pt-9">
@@ -87,8 +90,10 @@ export default function Contact() {
                 <AlternateEmailIcon />
               </span>
               <input
-               value={email}
-               onChange={(e)=>{setEmail(e.target.value)}}
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
                 id="email"
                 required
                 minLength={5}
@@ -101,7 +106,9 @@ export default function Contact() {
             <textarea
               id="message"
               value={message}
-              onChange={(e)=>{setMessage(e.target.value)}}
+              onChange={(e) => {
+                setMessage(e.target.value);
+              }}
               rows="4"
               required
               minLength={10}
@@ -145,15 +152,6 @@ export default function Contact() {
               </svg>
               Sending...
             </button>
-            {/* <button
-              type="button"
-              className={`bg-clr_blue ${
-                loading === true ? "visible" : "hidden"
-              }`}
-              disabled
-            >
-              Sending...
-            </button> */}
             <button
               type="button"
               disable={"true"}
@@ -163,71 +161,103 @@ export default function Contact() {
             >
               <FileDownloadDoneIcon /> Message Sent
             </button>
+            {width < 720 && (
+              <div data-aos={"fade-left"} className="text-center mt-5">
+                <div className="text-center text-3xl font-bold">Follow Me</div>
+                <div className="text-white flex flex-row gap-7 w-fit mx-auto pt-4">
+                  <div
+                    onClick={() =>
+                      window.open("https://github.com/iamrutvikbarot", "_blank")
+                    }
+                  >
+                    <GitHubIcon className="cursor-pointer hover:scale-105" />
+                  </div>
+                  <div
+                    onClick={() =>
+                      window.open(
+                        "https://www.instagram.com/iamrutvikbarot",
+                        "_blank"
+                      )
+                    }
+                  >
+                    {" "}
+                    <InstagramIcon className="cursor-pointer hover:scale-105" />
+                  </div>
+                  <div
+                    onClick={() =>
+                      window.open(
+                        "https://www.linkedin.com/in/rutvik-barot-1107rm",
+                        "_blank"
+                      )
+                    }
+                  >
+                    {" "}
+                    <LinkedInIcon className="cursor-pointer hover:scale-105" />
+                  </div>
+                </div>
+                <div className="mt-6 italic text-sm font-medium text-blue-500 ">
+                  <span className=" pl-1 ">Copyright</span>
+                  <CopyrightIcon className="cursor-pointer mx-1" />
+                  <span> {new Date().getFullYear()} Rutvik Barot</span>
+                </div>
+              </div>
+            )}
           </form>
         </div>
-        <div className="flex-auto w-80  flex flex-col justify-center text-center items-center  gap-1">
-          <div data-aos={"fade-left"}>
-            <lottie-player
-              autoplay
-              loop
-              mode="bounce"
-              src="https://assets9.lottiefiles.com/packages/lf20_3rqwsqnj.json"
-              style={{ width: "350px" }}
-            />
-          </div>
-          <div data-aos={"slide-up"} className="text-center">
-            <div className="text-center mt-2 text-3xl font-bold">Follow Me</div>
-            <div className="text-white flex flex-row gap-7 w-fit mx-auto pt-4">
-              <div
-                onClick={() =>
-                  window.open("https://github.com/iamrutvikbarot", "_blank")
-                }
-              >
-                <GitHubIcon className="cursor-pointer hover:scale-105" />
-              </div>
-              <div
-                onClick={() =>
-                  window.open(
-                    "https://www.instagram.com/iamrutvikbarot",
-                    "_blank"
-                  )
-                }
-              >
-                {" "}
-                <InstagramIcon className="cursor-pointer hover:scale-105" />
-              </div>
-              <div
-                onClick={() =>
-                  window.open(
-                    "https://www.linkedin.com/in/rutvik-barot-1107rm",
-                    "_blank"
-                  )
-                }
-              >
-                {" "}
-                <LinkedInIcon className="cursor-pointer hover:scale-105" />
-              </div>
-             
+        {width > 720 && (
+          <div className="flex-auto w-80  flex flex-col justify-center text-center items-center  gap-1">
+            <div data-aos={"fade-left"}>
+              <lottie-player
+                autoplay
+                loop
+                mode="bounce"
+                src="https://assets9.lottiefiles.com/packages/lf20_3rqwsqnj.json"
+                style={{ width: "350px" }}
+              />
             </div>
-            <div className="mt-6 italic text-sm font-medium text-blue-500 ">
-              <span className=" pl-1 ">Copyright</span>
-              <CopyrightIcon className="cursor-pointer mx-1" />
-              <span> {new Date().getFullYear()} Rutvik Barot</span>
+            <div data-aos={"slide-up"} className="text-center">
+              <div className="text-center mt-2 text-3xl font-bold">
+                Follow Me
+              </div>
+              <div className="text-white flex flex-row gap-7 w-fit mx-auto pt-4">
+                <div
+                  onClick={() =>
+                    window.open("https://github.com/iamrutvikbarot", "_blank")
+                  }
+                >
+                  <GitHubIcon className="cursor-pointer hover:scale-105" />
+                </div>
+                <div
+                  onClick={() =>
+                    window.open(
+                      "https://www.instagram.com/iamrutvikbarot",
+                      "_blank"
+                    )
+                  }
+                >
+                  {" "}
+                  <InstagramIcon className="cursor-pointer hover:scale-105" />
+                </div>
+                <div
+                  onClick={() =>
+                    window.open(
+                      "https://www.linkedin.com/in/rutvik-barot-1107rm",
+                      "_blank"
+                    )
+                  }
+                >
+                  {" "}
+                  <LinkedInIcon className="cursor-pointer hover:scale-105" />
+                </div>
+              </div>
+              <div className="mt-6 italic text-sm font-medium text-blue-500 ">
+                <span className=" pl-1 ">Copyright</span>
+                <CopyrightIcon className="cursor-pointer mx-1" />
+                <span> {new Date().getFullYear()} Rutvik Barot</span>
+              </div>
             </div>
           </div>
-        </div>
-        <ToastContainer
-          position="bottom-center"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="colored"
-        />
+        )}
       </div>
     </div>
   );
