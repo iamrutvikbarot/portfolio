@@ -12,19 +12,19 @@ This is a repository for my personal portfolio website, showcasing my skills, pr
 
 
 ## Home Page :
-<img width="960" alt="image" src="https://github.com/daniel-jebarson/daniel-jebarson.github.io/assets/88134306/ecc997bf-173e-4ff8-bb50-40984bf34469">
+<img width="960" alt="image" src="https://github.com/iamrutvikbarot/portfolio/assets/106156206/ba7ee1dd-1475-4a85-a74f-94468062c2ac">
 
 ## About Me Page :
-<img width="960" alt="image" src="https://github.com/daniel-jebarson/daniel-jebarson.github.io/assets/88134306/27cf88cc-6ed5-4b0a-bae2-864ae3d176f7">
+<img width="960" alt="image" src="https://github.com/iamrutvikbarot/portfolio/assets/106156206/b440cce3-9b3b-43be-824a-6c2e11962bbc">
 
 ## Resume Page :
-<img width="960" alt="image" src="https://github.com/daniel-jebarson/daniel-jebarson.github.io/assets/88134306/53732e2b-4afb-486e-8ae2-fd28d0a7e414">
+<img width="960" alt="image" src="https://github.com/iamrutvikbarot/portfolio/assets/106156206/83d4737a-37de-495f-b4b8-02928b4f6de8">
 
-## Projects Page :
-<img width="960" alt="image" src="https://github.com/daniel-jebarson/daniel-jebarson.github.io/assets/88134306/2da14dd0-c23a-4275-b5c2-2647414339ed">
+<!-- ## Projects Page :
+<img width="960" alt="image" src="https://github.com/iamrutvikbarot/portfolio/assets/assets/88134306/2da14dd0-c23a-4275-b5c2-2647414339ed"> -->
 
 ## Contact Page :
-<img width="957" alt="image" src="https://github.com/daniel-jebarson/daniel-jebarson.github.io/assets/88134306/4787a0f5-99ee-4839-bb97-016ec8e3159e">
+<img width="957" alt="image" src="https://github.com/iamrutvikbarot/portfolio/assets/106156206/9e699957-fb6a-4de5-ae84-95c859200786">
 
 
 ## Technologies Used
@@ -39,9 +39,8 @@ This is a repository for my personal portfolio website, showcasing my skills, pr
 
 To run the website locally, follow these steps:
 
-1. Clone this repository to your local machine using `git clone https://github.com/daniel-jebarson/daniel-jebarson.github.io.git`
-2. Navigate to the project's directory: `cd daniel-jebarson.github.io`
-3. Then install packages and run it using the below commands
+1. Clone this repository to your local machine using `git clone https://github.com/iamrutvikbarot/portfolio.git`
+2. Then install packages and run it using the below commands
 ```
 yarn
 
