@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.ce69f32f.css",
-    "main.js": "/portfolio/static/js/main.b023bdbd.js",
+    "main.css": "/portfolio/static/css/main.9023428e.css",
+    "main.js": "/portfolio/static/js/main.151f0bbf.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/Rutvik_Barot.pdf": "/portfolio/static/media/Rutvik_Barot.32fb458251b774c3a818.pdf",
     "static/media/RobotoSlab-Black.ttf": "/portfolio/static/media/RobotoSlab-Black.b1eefbae7b352cda1c3a.ttf",
@@ -12,12 +12,12 @@
     "static/media/gotosite.webp": "/portfolio/static/media/gotosite.dc2459843a8d51a90e5d.webp",
     "static/media/github.webp": "/portfolio/static/media/github.ed1c06d925fff0b57e32.webp",
     "index.html": "/portfolio/index.html",
-    "main.ce69f32f.css.map": "/portfolio/static/css/main.ce69f32f.css.map",
-    "main.b023bdbd.js.map": "/portfolio/static/js/main.b023bdbd.js.map",
+    "main.9023428e.css.map": "/portfolio/static/css/main.9023428e.css.map",
+    "main.151f0bbf.js.map": "/portfolio/static/js/main.151f0bbf.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce69f32f.css",
-    "static/js/main.b023bdbd.js"
+    "static/css/main.9023428e.css",
+    "static/js/main.151f0bbf.js"
   ]
 }
