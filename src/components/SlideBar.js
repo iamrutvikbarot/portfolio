@@ -68,7 +68,7 @@ export default function Slidebar() {
         >
           <a href="#resume">Resume</a>
         </p>
-        <p
+        {/* <p
           onClick={() => setSelect(3)}
           className={`cursor-pointer hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${
             select === 3 ? "text-blue-600 " : ""
@@ -77,7 +77,7 @@ export default function Slidebar() {
           data-aos-delay="1400"
         >
           <a href="#projects">Projects</a>
-        </p>
+        </p> */}
         <p
           onClick={() => setSelect(4)}
           className={`cursor-pointer hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${

@@ -30,7 +30,7 @@ export default function Display() {
       <Home width={width}/>
       <About width={width}/>
       <Resume width={width}/>
-      <Projects width={width}/>
+      {/* <Projects width={width}/> */}
       <Contact width={width}/>
     </div>
   );
