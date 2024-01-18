@@ -8,15 +8,16 @@ export default function Home({width}) {
     return splitter.splitGraphemes(string);
   };
 
-  const sDate = "2022-07-04" 
-  const cDate = new Date();
-  const st = new Date(sDate);
-  const yD = cDate.getFullYear() - st.getFullYear();
-  const mD = cDate.getMonth() - st.getMonth();
+const jDate = new Date("2022-07-04");
+const cDate = new Date();
 
+// Calculate the difference in milliseconds
+const timeDifference = cDate - jDate;
 
-
-
+// Convert milliseconds to years and months
+const millisecondsInYear = 1000 * 60 * 60 * 24 * 365.25;
+const years = Math.floor(timeDifference / millisecondsInYear);
+const months = Math.floor((timeDifference % millisecondsInYear) / (1000 * 60 * 60 * 24 * 30.44));
 
   return (
     <div className="min-h-screen grid grid-cols-1 gap-7 name content-center text-center">
@@ -37,7 +38,7 @@ export default function Home({width}) {
             strings: [
               "✋I'm Rutvik Barot",
               "I'm an enthusiast Frontend 🌐developer",
-              `I've ${yD}.${mD+1} years of experience in react framework `,
+              `I've ${years}.${months} years of experience in react framework `,
               "You can 📲 me through discord or ✉️",
             ],
             delay: 150,
